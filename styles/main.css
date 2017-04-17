@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  font-size: 20px;
+  font-family: 'Bungee Hairline', cursive;
+  background: black;
+  text-align: center;
+  color: white;
+}
+
+.contain {
+  background: black;
+  position: relative;
+  max-height: 600px;
+}
+
+h2 {
+  margin: 10px 0 10px 0;
+}
+
+.prompt {
+  font-weight: bold;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  position: absolute;
+  background: black;
+  box-shadow: 0px 0px 130px -30px #5E9DC8, inset 0px 0px 100px -40px #5E9DC8;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 31%;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 2;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  
+}
+
+.sides {
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+  height: 30%;
+}
+
+.side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  background: rgba(94,157,200, .01);
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+/*   padding: 20px; */
+  font-size: 25px;
+}
+
+.side:hover {
+  background: rgba(220,240,247, .7);
+  color: black;
+  cursor: pointer;
+}
+
+.game-board {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 375px;
+  height: 375px;
+}
+
+.square {
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  font-size: 110px;
+  color: #5E9DC8;
+}
+
+/*syntax enables easily removed hover class with js*/
+.hover:hover {
+  cursor: pointer;
+}
+
+.line.horiz {
+  position: absolute;
+  height: 1px;
+  width: 96%;
+  left: 2%;
+  background: #5E9DC8;
+}
+
+.line.vert {
+  position: absolute;
+  width: 1px;
+  height: 96%;
+  top: 2%;
+  background: #5E9DC8;
+}
+
+.H-one {
+  top: 33.3%;
+}
+
+.H-two {
+  bottom: 33.3%;
+}
+
+.V-one {
+  left: 33.3%;
+}
+
+.V-two {
+  right: 33.3%;
+}
